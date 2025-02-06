@@ -1,0 +1,21 @@
+{
+  "name": "admin-productos-mern-backend",
+  "version": "1.0.0",
+  "description": "Administrador de productos con el MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Administrador",
+    "de",
+    "productos",
+    "Node.js",
+    "product",
+    "manager",
+    "Express.js",
+    "MongoDB"
+  ],
+  "author": "José Alvarado",
+  "license": "ISC"
+}
