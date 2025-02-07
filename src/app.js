@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import "dotenv/config";
+import "./config/mongo.database.js";
 
 
 class App {
