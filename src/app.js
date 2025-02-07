@@ -1,7 +1,9 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import "dotenv/config";
+import morgan from "morgan";
+import productRoutes from "./routes/product.routes.js";
 import "./config/mongo.database.js";
 
 
@@ -9,6 +11,8 @@ class App {
 
   constructor(){
     this.app = express();
+    this.middlewares();
+    this.routes();
   }
 
   middlewares() {
@@ -16,12 +20,11 @@ class App {
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cors());
     this.app.use(helmet());
+    this.app.use(morgan('tiny'));
   }
 
   routes() {
-    this.app.get('/', (req, res) => {
-      res.send("This is my products manager api");
-    })
+    this.app.use('/api', productRoutes);
   }
 
 }
