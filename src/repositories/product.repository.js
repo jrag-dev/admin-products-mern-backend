@@ -26,8 +26,8 @@ class ProductRepository extends IRepository{
   }
 
   async delete(id) {
-    return Product.findOneAndDelete({ _id: id });
+    return await Product.findOneAndDelete({ _id: id });
   }
 }
 
-export default new ProductRepository();
+export default ProductRepository;
